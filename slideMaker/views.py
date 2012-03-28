@@ -8,4 +8,4 @@ def index(request):
 	
 def render_slide(request):
 	slides = request.GET.getlist('slide')
-	return render_to_response('present.html',{'slides':slides})
+	return render_to_response('present.html',{'slides':slides},context_instance=RequestContext(request))
