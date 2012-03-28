@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Prepare Slides</title>
+		<link type="text/css" rel="stylesheet" href="{{STATIC_URL}}css/rte.css" />
+		<script type="text/javascript" src="{{STATIC_URL}}js/jquery-1.7.1_min.js"></script>
+		<script type="text/javascript" src="{{STATIC_URL}}js/jquery.rte.js"></script>
+		<script type="text/javascript" src="{{STATIC_URL}}js/core.js"></script>
+		<script type="text/javascript">		
+			$(document).ready(function(){initRte('#rte1')});
+			function initRte(id)
+			{
+				$(id).rte({content_css_url:"{{STATIC_URL}}css/rte.css",media_url:"{{STATIC_URL}}img/",});
+			}
+		</script>
+	</head>
+	<body>
+		<form action="/present/" method="get">
+			<div id="slides">
+				<div class="slideContent" id="slide1" >
+					<textarea name="slide" id="rte1" class="rtZone" style="border:1px #bbb solid;padding:1em;"></textarea>
+					<input type="button" onclick="addSlide('#slide1')" value="Add Slide"></input>
+					<input type="button" onclick="removeSlide('#slide1')" value="Delete Slide"></input>
+				</div>
+			</div>
+			<p><input type="submit" value="Present!"/></p>
+		</form>
+	</body>
+</html>
