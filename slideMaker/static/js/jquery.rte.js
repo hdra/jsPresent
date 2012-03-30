@@ -133,8 +133,9 @@ if(typeof $.fn.rte === "undefined") {
                     <select>\
                         <option value=''>Block style</option>\
                         <option value='p'>Paragraph</option>\
-                        <option value='h1'>Title</option>\
-						<option value='h2'>SubTitle</option>\
+                        <option value='h1'>Emphasize</option>\
+                        <option value='h2'>Title</option>\
+						<option value='h3'>SubTitle</option>\
                         <option value='address'>Address</option>\
                     </select>\
                 </p>\
